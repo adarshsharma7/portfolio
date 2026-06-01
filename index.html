@@ -4,257 +4,643 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Adarsh Sharma — Full Stack Developer</title>
-    <meta name="description" content="Adarsh Sharma — Full Stack Developer | Projects, Resume, Contact" />
+    <title>Adarsh Sharma — Software Developer (Web & Mobile)</title>
+    <meta name="description" content="Adarsh Sharma — Software Developer. Portfolio showcasing Full Stack Web Development (Next.js, Node.js) and Mobile App Development (Flutter)." />
+    
+    <!-- Google Fonts for Premium Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 
 <body>
+    <!-- Background Glow Effects -->
+    <div class="glow-bg glow-1" aria-hidden="true"></div>
+    <div class="glow-bg glow-2" aria-hidden="true"></div>
+
     <div class="container">
         <header class="site-header">
-            <div class="logo">Portfolio</div>
+            <div class="logo">
+                <span class="logo-text">Adarsh</span><span class="logo-accent">.Sharma</span>
+            </div>
 
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+                <a href="#about"><i class="fa-regular fa-user"></i> About</a>
+                <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="#experience"><i class="fa-solid fa-briefcase"></i> Experience</a>
+                <a href="#projects"><i class="fa-solid fa-laptop-code"></i> Projects</a>
+                <a href="#contact"><i class="fa-regular fa-envelope"></i> Contact</a>
             </nav>
         </header>
 
         <main>
+            <!-- Hero Section -->
             <section class="hero">
                 <div class="intro">
+                    <div class="badge-container">
+                        <span class="hero-badge"><i class="fa-solid fa-mobile-screen-button"></i> Web & Mobile Software Developer</span>
+                    </div>
                     <h1 class="name">Adarsh Sharma</h1>
-                    <p class="lead">I am a Full Stack Developer skilled in modern web technologies (React, Next.js,
-                        Node.js). I build scalable, interactive user interfaces and real-time features like
-                        WebSocket/WebRTC.</p>
+                    <p class="lead">Detail-oriented <strong>Software Developer</strong> specializing in building scalable web architectures and native mobile applications. I bridge the gap between complex backend systems and premium user experiences using the <strong>MERN / Next.js stack</strong> and <strong>Flutter / Dart</strong>.</p>
 
                     <div class="cta-group">
-                        <a class="btn" href="adarshResume.pdf" download aria-label="Download Resume">⬇️ Download
-                            Resume</a>
-                        <button id="openResumeModal" class="btn" aria-haspopup="dialog">📄 View Resume</button>
-                        <a class="btn" href="#projects">View Projects</a>
+                        <a class="btn btn-primary" href="webResume.pdf" target="_blank">
+                            <i class="fa-regular fa-file-pdf"></i> Web Dev Resume (PDF)
+                        </a>
+                        <a class="btn btn-primary" href="flutterResume.pdf" target="_blank" style="background: linear-gradient(135deg, var(--accent-web), var(--accent-purple)); box-shadow: 0 4px 20px rgba(99, 102, 241, 0.25);">
+                            <i class="fa-regular fa-file-pdf"></i> Flutter Resume (PDF)
+                        </a>
+                        <button id="openResumeModal" class="btn btn-secondary" aria-haspopup="dialog">
+                            <i class="fa-regular fa-id-badge"></i> Interactive Resume
+                        </button>
+                        <a class="btn btn-tertiary" href="#projects">
+                            <i class="fa-solid fa-arrow-down-long"></i> Explore Projects
+                        </a>
                     </div>
 
                     <section id="about" class="about" aria-labelledby="about-heading">
-                        <h2 id="about-heading">About</h2>
-                        <p class="muted">Aspiring Full Stack Developer with hands-on experience building real-time
-                            applications and interactive UIs. Currently pursuing MCA and focused on producing
-                            production-ready web applications.</p>
+                        <h2 id="about-heading" class="section-title">Professional Profile</h2>
+                        <p class="profile-desc">
+                            Passionate Developer with hands-on startup experience in engineering production-ready mobile and web ecosystems. Combining robust expertise in <span class="highlight-mob">Flutter mobile architectures (Riverpod, REST APIs)</span> with highly structured expertise in <span class="highlight-web">Full Stack Web development (React, Next.js, Node.js, WebSockets, WebRTC)</span>.
+                        </p>
+                        <p class="profile-desc text-secondary">
+                            Known for building low-latency collaborative tools, real-time media streaming platforms, and integrating AI architectures (OpenAI, Groq APIs, ElevenLabs voice agents). Dedicated to scalable, modular clean code, and maintaining high performance across both desktop and mobile viewports.
+                        </p>
                     </section>
-
-                    <!-- <div class="resume-inline-wrapper">
-                        <div class="resume-tools">
-                            <button id="toggleInline" class="btn" aria-expanded="false">🔽 Show / Hide Resume
-                                Inline</button>
-                            <a class="btn" href="adarshResume.pdf" download>⬇️ Download PDF</a>
-                            <span class="tip">Tip: You can view in modal or download</span>
-                        </div>
-
-                        <div id="inlineResume" class="resume-box hidden" aria-hidden="true" role="region"
-                            aria-label="Resume preview">
-                            <object data="adarshResume.pdf" type="application/pdf" width="100%" height="600">
-                                <p class="muted">Your browser does not support embedded PDFs. <a href="adarshResume.pdf"
-                                        class="accent">Download the resume</a> to view it.</p>
-                            </object>
-                        </div>
-                    </div> -->
                 </div>
 
+                <!-- Profile Aside Card -->
                 <aside class="card profile-card" aria-label="Profile card">
                     <div class="photo-wrap">
                         <img class="photo" src="myDp.jpeg" alt="Adarsh Sharma" />
                         <div class="ring" aria-hidden="true"></div>
+                        <div class="photo-badge"><span class="pulse-dot"></span> Online & Available</div>
                     </div>
 
                     <div class="profile-meta">
                         <strong class="profile-name">Adarsh Sharma</strong>
-                        <div class="profile-role">Full Stack Developer</div>
+                        <div class="profile-role">Full Stack & Mobile Developer</div>
+                        <div class="profile-location"><i class="fa-solid fa-location-dot"></i> Baraut, UP, India</div>
 
-                        <div class="profile-links">
-                            <a class="btn" href="mailto:adarshsharma7p@gmail.com">Email</a>
-                            <a class="btn" href="https://github.com/adarshsharma7" target="_blank"
-                                rel="noopener">GitHub</a>
+                        <div class="profile-socials">
+                            <a class="social-icon" href="https://www.linkedin.com/in/adarsh-sharma-19710a264" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a class="social-icon" href="https://github.com/adarshsharma7" target="_blank" rel="noopener" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a class="social-icon" href="mailto:mail.adarshbhardwaj@gmail.com" aria-label="Send Email">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="profile-action">
+                            <a class="btn btn-full" href="mailto:mail.adarshbhardwaj@gmail.com">
+                                <i class="fa-regular fa-envelope"></i> Hire Me
+                            </a>
                         </div>
                     </div>
                 </aside>
             </section>
 
+            <!-- Skills Section (Separated by App and Web) -->
             <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
-                <h2 id="skills-heading">Skills</h2>
-                <div class="skills-grid">
-
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>HTML & CSS</span>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                alt="HTML" class="skill-icon">
-
+                <div class="section-header">
+                    <h2 id="skills-heading" class="section-title">Technical Expertise</h2>
+                    <p class="section-subtitle">A balanced toolkit designed for full-spectrum product engineering.</p>
+                </div>
+                
+                <div class="skills-category-grid">
+                    <!-- Mobile App Development Skills -->
+                    <div class="skills-card tech-skills mobile-dev-card">
+                        <div class="card-header">
+                            <div class="card-icon mob-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <h3>Mobile App Development</h3>
                         </div>
-                        <div class="bar"><i style="width:90%"></i></div>
-                        <small class="muted">Semantic markup, responsive layouts, CSS animations</small>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Flutter Framework</span>
+                                    <span class="skill-val">90%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Dart Language</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>State Management (Riverpod / Provider)</span>
+                                    <span class="skill-val">88%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>REST API Integration & JSON Parsing</span>
+                                    <span class="skill-val">90%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Firebase (Auth, Firestore, Storage)</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 85%"></div></div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>Tailwind CSS</span>
-                            <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
-                                alt="Tailwind CSS" class="skill-icon">
-
-
+                    <!-- Web & Backend Development Skills -->
+                    <div class="skills-card tech-skills web-dev-card">
+                        <div class="card-header">
+                            <div class="card-icon web-icon"><i class="fa-solid fa-globe"></i></div>
+                            <h3>Full Stack Web Development</h3>
                         </div>
-                        <div class="bar"><i style="width:85%"></i></div>
-                        <small class="muted">Utility-first styling, component design</small>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>React & Next.js</span>
+                                    <span class="skill-val">88%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript & TypeScript</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Node.js & Express JS</span>
+                                    <span class="skill-val">85%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Tailwind CSS & Responsive UI</span>
+                                    <span class="skill-val">90%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>MongoDB Schema Design</span>
+                                    <span class="skill-val">80%</span>
+                                </div>
+                                <div class="bar-track"><div class="bar-fill" style="width: 80%"></div></div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>JavaScript / TypeScript</span>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                alt="JavaScript" class="skill-icon">
-
+                    <!-- Other Engineering Core Assets -->
+                    <div class="skills-card soft-skills">
+                        <div class="card-header">
+                            <div class="card-icon soft-icon"><i class="fa-solid fa-gears"></i></div>
+                            <h3>Systems, Tooling & Real-time Protocols</h3>
                         </div>
-                        <div class="bar"><i style="width:80%"></i></div>
-                        <small class="muted">ES6+, async patterns</small>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>React / Next.js</span>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                alt="React" class="skill-icon">
-
+                        <div class="tag-cloud">
+                            <span class="skill-badge"><i class="fa-solid fa-network-wired"></i> WebSockets</span>
+                            <span class="skill-badge"><i class="fa-solid fa-video"></i> WebRTC (Media Sync)</span>
+                            <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git Version Control</span>
+                            <span class="skill-badge"><i class="fa-brands fa-docker"></i> Docker Containers</span>
+                            <span class="skill-badge"><i class="fa-solid fa-bolt"></i> Redis Caching</span>
+                            <span class="skill-badge"><i class="fa-solid fa-key"></i> JWT & OAuth Sec.</span>
+                            <span class="skill-badge"><i class="fa-solid fa-brain"></i> OpenAI & Groq Integration</span>
+                            <span class="skill-badge"><i class="fa-solid fa-microphone-lines"></i> ElevenLabs Voice Agents</span>
                         </div>
-                        <div class="bar"><i style="width:80%"></i></div>
-                        <small class="muted">Components, hooks, SSR/SSG basics</small>
                     </div>
-
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>Node.js / Express</span>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                                alt="Node.js" class="skill-icon">
-
-                        </div>
-                        <div class="bar"><i style="width:75%"></i></div>
-                        <small class="muted">REST APIs, middleware</small>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>MongoDB</span>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                                alt="MongoDB" class="skill-icon">
-
-                        </div>
-                        <div class="bar"><i style="width:75%"></i></div>
-                        <small class="muted">Schema design, Mongoose</small>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>WebSockets / WebRTC</span>
-                            <i style="color: #3b82f6;" class="fa-solid fa-globe skill-icon"></i>
-                        </div>
-                        <div class="bar"><i style="width:70%"></i></div>
-                        <small class="muted">Real-time sync, audio basics</small>
-                    </div>
-
-
-
-                    <div class="skill">
-                        <div class="skill-head">
-                            <span>Git</span>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"
-                                class="skill-icon">
-
-                        </div>
-                        <div class="bar"><i style="width:80%"></i></div>
-                        <small class="muted">Branching, PRs</small>
-                    </div>
-
                 </div>
             </section>
 
+            <!-- Experience Timeline Section -->
+            <section id="experience" class="section education-section" aria-labelledby="exp-heading">
+                <div class="section-header">
+                    <h2 id="exp-heading" class="section-title">Professional Milestones</h2>
+                    <p class="section-subtitle">Hands-on experience developing in fast-paced collaborative environments.</p>
+                </div>
 
+                <div class="edu-cert-grid">
+                    <!-- Experience Column -->
+                    <div class="timeline-column">
+                        <h3><i class="fa-solid fa-briefcase"></i> Work Experience</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-time">Sep, 2025 - Present</div>
+                                <h4>Software Developer (Full Stack & Mobile)</h4>
+                                <p class="timeline-org">Tech Startup</p>
+                                <p class="timeline-desc text-secondary">
+                                    Engineering production-ready Flutter mobile applications and web ecosystems with a strict focus on system latency, scalability, and modular architectures.
+                                </p>
+                                <ul class="timeline-bullets-detail">
+                                    <li>Developing scalable Flutter architectures utilizing Riverpod and robust REST API integrations.</li>
+                                    <li>Designing end-to-end LMS platforms connecting students, tutors, and administrators with role-based access.</li>
+                                    <li>Implementing real-time communication modules, automated notifications, and AI conversational pipelines.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Column -->
+                    <div class="timeline-column">
+                        <h3><i class="fa-solid fa-graduation-cap"></i> Academic Foundation</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-time">2025 - 2027 (Pursuing)</div>
+                                <h4>Master of Computer Applications (MCA)</h4>
+                                <p class="timeline-org">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+                                <p class="timeline-desc text-secondary">Advanced specialization in software design principles, computer architectures, databases, and scientific computation methods.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section (Separated by Web and Mobile Apps) -->
             <section id="projects" class="section" aria-labelledby="projects-heading">
-                <h2 id="projects-heading">Projects</h2>
-                <div class="grid projects-grid">
-                    <article class="proj">
-                        <h3>SyncDraw — Real-Time Collaborative Drawing</h3>
-                        <p class="muted">Collaborative drawing with merge/split canvas, in-app audio and chat. Focus on
-                            low-latency state sync.</p>
-                        <div class="tags"><span class="tag">Next.js</span><span class="tag">WebRTC</span><span
-                                class="tag">Socket.IO</span></div>
-                        <div class="proj-links">
-                            <a class="btn" href="https://github.com/adarshsharma7/SyncDraw" target="_blank"
-                                rel="noopener">Repo</a>
-                            <a class="btn" href="https://syncdraw.netlify.app/" target="_blank" rel="noopener">Live</a>
-                        </div>
-                    </article>
+                <div class="section-header">
+                    <h2 id="projects-heading" class="section-title">Product Showcase</h2>
+                    <p class="section-subtitle">Real-world applications divided by specialized platform architectures.</p>
+                </div>
 
-                    <article class="proj">
-                        <h3>Stream Sync — Interactive Video Platform</h3>
-                        <p class="muted">Custom synchronized video playback, chat and stories with real-time updates
-                            using Pusher.</p>
-                        <div class="tags"><span class="tag">Next.js</span><span class="tag">Pusher</span></div>
-                        <div class="proj-links">
-                            <a class="btn" href="https://github.com/adarshsharma7/Stream-Sync" target="_blank"
-                                rel="noopener">Repo</a>
-                            <a class="btn" href="https://streaming-sync.vercel.app/" target="_blank"
-                                rel="noopener">Live</a>
+                <!-- Tabs/Category Headers -->
+                <div class="project-sections-wrap">
+                    <!-- Mobile Apps Segment -->
+                    <div class="project-segment-block">
+                        <h3 class="segment-title"><i class="fa-solid fa-mobile-screen-button"></i> Mobile Applications (Flutter & Dart)</h3>
+                        <div class="grid projects-grid">
+                            <!-- Project 1 -->
+                            <article class="proj mob-proj-card">
+                                <div class="proj-meta">
+                                    <span class="proj-category mob-badge"><i class="fa-solid fa-mobile-screen-button"></i> Mobile App</span>
+                                    <span class="proj-type">AI Integration</span>
+                                </div>
+                                <h3>YaadKaro — AI Learning & Assessment App</h3>
+                                <p class="muted">Built a complete study assistant featuring automated notebook scanning, interactive AI oral examinations, and high-performance cross-platform interfaces.</p>
+                                
+                                <div class="proj-details">
+                                    <ul class="proj-bullets">
+                                        <li>Implemented notebook scanning pipelines using AI parser APIs to extract and concept-verify notes.</li>
+                                        <li>Integrated ElevenLabs voice APIs with Google TTS fallbacks for highly realistic voice examination loops.</li>
+                                        <li>Optimized API consumption via dynamic serverless cost-switching (ChatGPT-4o mini vs. Groq APIs).</li>
+                                        <li>Enhanced performance limits by integrating Redis caching layers and Docker containerization.</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tags">
+                                    <span class="tag"><i class="fa-solid fa-mobile-button"></i> Flutter</span>
+                                    <span class="tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                    <span class="tag"><i class="fa-solid fa-brain"></i> OpenAI</span>
+                                    <span class="tag"><i class="fa-solid fa-bolt"></i> Redis</span>
+                                </div>
+                            </article>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="proj">
-                        <h3>College Website — SPRC Baghpat</h3>
-                        <p class="muted">
-                            A responsive and accessible website built for my college with modern UI design, structured
-                            navigation, and dynamic content sections.
+                    <!-- Web Apps Segment -->
+                    <div class="project-segment-block" style="margin-top: 48px;">
+                        <h3 class="segment-title"><i class="fa-solid fa-globe"></i> Web Applications & APIs (Next.js / Node)</h3>
+                        <div class="grid projects-grid">
+                            <!-- Project 2 -->
+                            <article class="proj web-proj-card">
+                                <div class="proj-meta">
+                                    <span class="proj-category web-badge"><i class="fa-solid fa-layer-group"></i> Multi-Tenant SaaS</span>
+                                    <span class="proj-type">Enterprise AI LMS</span>
+                                </div>
+                                <h3>TutorApp — Enterprise-Grade Multi-Tenant AI LMS</h3>
+                                <p class="muted">A B2B SaaS platform orchestrating learning, AI examinations, custom proctoring, and billing. Developed end-to-end at a tech startup, featuring deep web portals synced with a cross-platform Flutter companion application.</p>
+                                
+                                <div class="proj-details">
+                                    <ul class="proj-bullets">
+                                        <li><strong>4-Portal Architecture:</strong> Built specialized dashboards for <strong>Superadmin ("God-Mode" Agentic Coordinator)</strong>, <strong>Admin (branding & Razorpay tiers)</strong>, <strong>Tutor (AI exam checkers)</strong>, and <strong>Student portals (RAG Doubt Solvers)</strong>.</li>
+                                        <li><strong>AI Proctoring & Credit Limits:</strong> Engineered browser proctoring analytics alongside a real-time event-driven Anti-Bankruptcy AI Credit Quota system communicating via silent Axios interceptors.</li>
+                                        <li><strong>Startup VPS Scaling:</strong> Scaled on a Hostinger VPS with Nginx, PM2, and custom databases to ensure ultra-low network roundtrips.</li>
+                                    </ul>
+                                </div>
 
-                        </p>
-                        <div class="tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Redux</span>
-                            <span class="tag">Express</span>
+                                <div class="tags">
+                                    <span class="tag"><i class="fa-brands fa-react"></i> Next.js (MERN)</span>
+                                    <span class="tag"><i class="fa-solid fa-brain"></i> Agentic AI (Groq/RAG)</span>
+                                    <span class="tag"><i class="fa-solid fa-mobile-screen-button"></i> Flutter Companion App</span>
+                                    <span class="tag"><i class="fa-solid fa-credit-card"></i> Razorpay SaaS</span>
+                                </div>
+                                <div class="proj-links">
+                                    <a class="btn btn-primary btn-sm" href="http://195.35.20.207:5000/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Portal</a>
+                                </div>
+                            </article>
+
+                            <!-- Project 3 -->
+                            <article class="proj web-proj-card">
+                                <div class="proj-meta">
+                                    <span class="proj-category web-badge"><i class="fa-solid fa-globe"></i> Web App</span>
+                                    <span class="proj-type">Real-Time Canvas</span>
+                                </div>
+                                <h3>SyncDraw — Collaborative Canvas</h3>
+                                <p class="muted">Designed an interactive real-time graphic drawing application showcasing collaborative boards with canvas splitting/merging and low-latency client sync.</p>
+                                
+                                <div class="proj-details">
+                                    <ul class="proj-bullets">
+                                        <li>Built high-fidelity real-time canvas layers permitting active team-wide simultaneous drawing.</li>
+                                        <li>Integrated low-latency multi-client communication using WebSocket/Socket.IO connections.</li>
+                                        <li>Implemented WebRTC protocols enabling direct client-to-client in-app audio streams and chat boxes.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tags">
+                                    <span class="tag"><i class="fa-brands fa-react"></i> Next.js</span>
+                                    <span class="tag"><i class="fa-solid fa-network-wired"></i> WebSockets</span>
+                                    <span class="tag"><i class="fa-solid fa-video"></i> WebRTC</span>
+                                    <span class="tag"><i class="fa-solid fa-palette"></i> Tailwind</span>
+                                </div>
+                                <div class="proj-links">
+                                    <a class="btn btn-secondary btn-sm" href="https://github.com/adarshsharma7/SyncDraw" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+                                    <a class="btn btn-primary btn-sm" href="https://syncdraw.netlify.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                                </div>
+                            </article>
+
+                            <!-- Project 4 -->
+                            <article class="proj web-proj-card">
+                                <div class="proj-meta">
+                                    <span class="proj-category web-badge"><i class="fa-solid fa-globe"></i> Web App</span>
+                                    <span class="proj-type">Streaming</span>
+                                </div>
+                                <h3>Stream Sync — Video & Community Hub</h3>
+                                <p class="muted">Built a specialized interactive video hub offering community channels, real-time text sync, synchronized media timelines, and story sharing.</p>
+                                
+                                <div class="proj-details">
+                                    <ul class="proj-bullets">
+                                        <li>Developed concurrent real-time comment searches and robust direct-to-subscriber messaging loops.</li>
+                                        <li>Integrated live text channels and story boards backed by real-time Pusher API events.</li>
+                                        <li>Configured high-performance MERN query indexes to support high-throughput message queries.</li>
+                                    </ul>
+                                </div>
+
+                                <div class="tags">
+                                    <span class="tag"><i class="fa-brands fa-react"></i> Next.js</span>
+                                    <span class="tag"><i class="fa-solid fa-database"></i> MongoDB</span>
+                                    <span class="tag"><i class="fa-solid fa-tower-broadcast"></i> Pusher</span>
+                                    <span class="tag"><i class="fa-solid fa-bolt"></i> API</span>
+                                </div>
+                                <div class="proj-links">
+                                    <a class="btn btn-secondary btn-sm" href="https://github.com/adarshsharma7/Stream-Sync" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Repo</a>
+                                    <a class="btn btn-primary btn-sm" href="https://syncdraw.netlify.app/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                                </div>
+                            </article>
                         </div>
-                        <div class="proj-links">
-                            <a class="btn" href="https://github.com/adarshsharma7/frontendcollegewebsite"
-                                target="_blank" rel="noopener">Repo</a>
-                            <a class="btn" href="https://sprcbaghpat.vercel.app/" target="_blank"
-                                rel="noopener">Live</a>
-                        </div>
-                    </article>
-
+                    </div>
                 </div>
             </section>
 
-            <section id="contact" class="section" aria-labelledby="contact-heading">
-                <h2 id="contact-heading">Contact</h2>
-                <p class="muted">Email: <a href="mailto:adarshsharma7p@gmail.com">adarshsharma7p@gmail.com</a> •
-                    LinkedIn: <a href="https://www.linkedin.com/in/adarsh-sharma-19710a264" target="_blank"
-                        rel="noopener">linkedin</a></p>
+            <!-- Contact Section -->
+            <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+                <div class="card contact-card">
+                    <div class="contact-info-panel">
+                        <h2 id="contact-heading" class="section-title">Let's Collaborate!</h2>
+                        <p class="contact-lead">I am open to full-time opportunities or consulting projects in **Full Stack Web Engineering** or **Flutter Mobile Architecture**. Let's connect and discuss how my expertise can speed up your system delivery.</p>
+                        
+                        <div class="contact-details-list">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <span>Email Address</span>
+                                    <strong><a href="mailto:mail.adarshbhardwaj@gmail.com">mail.adarshbhardwaj@gmail.com</a></strong>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <div class="contact-text">
+                                    <span>Professional Network</span>
+                                    <strong><a href="https://www.linkedin.com/in/adarsh-sharma-19710a264" target="_blank" rel="noopener">linkedin.com/in/adarsh-sharma-19710a264</a></strong>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                                <div class="contact-text">
+                                    <span>GitHub Repos</span>
+                                    <strong><a href="https://github.com/adarshsharma7" target="_blank" rel="noopener">github.com/adarshsharma7</a></strong>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-text">
+                                    <span>Phone Number</span>
+                                    <strong><a href="tel:+918006708285">+91 8006708285</a></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Simulation -->
+                    <div class="contact-form-panel">
+                        <h3>Drop a Quick Message</h3>
+                        <form id="contactForm" class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully! Adarsh will reach out to you shortly.'); this.reset();">
+                            <div class="form-group">
+                                <label for="form_name">Name</label>
+                                <input type="text" id="form_name" placeholder="Your Name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="form_email">Email</label>
+                                <input type="email" id="form_email" placeholder="email@example.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="form_message">Message</label>
+                                <textarea id="form_message" rows="4" placeholder="Hi Adarsh, let's talk about the Web/Mobile role..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <i class="fa-regular fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </section>
         </main>
 
         <footer class="site-footer">
-            © 2025 Adarsh Sharma • <span class="muted">Responsive & Accessibility-minded</span>
+            <div class="footer-content">
+                <div class="footer-logo">Adarsh Sharma</div>
+                <p class="muted">Premium Web & Mobile Developer. Designed with modern aesthetics and strict accessibility principles.</p>
+                <div class="copyright">© 2026 Adarsh Sharma • All Rights Reserved.</div>
+            </div>
         </footer>
     </div>
 
-    <!-- Modal (hidden by default) -->
+    <!-- Resume Modal (Beautifully Structured Interactive & Printable HTML Resume) -->
     <div id="resumeModal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Resume viewer">
         <div class="modal" role="document">
             <header class="modal-header">
-                <div class="modal-title">Resume — Adarsh Sharma</div>
+                <div class="modal-title"><i class="fa-regular fa-id-badge"></i> Resume — Adarsh Sharma</div>
                 <div class="modal-actions">
-                    <a class="btn" href="adarshResume.pdf" download>⬇️ Download</a>
+                    <a class="btn btn-secondary btn-sm" href="webResume.pdf" target="_blank"><i class="fa-regular fa-file-pdf"></i> Web PDF</a>
+                    <a class="btn btn-secondary btn-sm" href="flutterResume.pdf" target="_blank"><i class="fa-regular fa-file-pdf"></i> Flutter PDF</a>
+                    <button id="printResumeBtn" class="btn btn-print"><i class="fa-solid fa-print"></i> Print Unified</button>
                     <button id="closeModal" class="close-btn" aria-label="Close resume viewer">✕ Close</button>
                 </div>
             </header>
-            <iframe id="modalPdf" class="modal-iframe" src="adarshResume.pdf" title="Adarsh Resume (PDF)"></iframe>
+            
+            <div class="modal-body printable-area">
+                <!-- Styled HTML Resume Sheet -->
+                <div class="resume-sheet">
+                    <!-- Sheet Header -->
+                    <div class="sheet-header">
+                        <div class="sheet-main-info">
+                            <h1>ADARSH SHARMA</h1>
+                            <div class="sheet-subtitle">Software Developer (Full Stack Web & Mobile)</div>
+                        </div>
+                        <div class="sheet-contact-info">
+                            <div><i class="fa-solid fa-location-dot"></i> Baraut, UP, India</div>
+                            <div><i class="fa-solid fa-phone"></i> +91 8006708285</div>
+                            <div><i class="fa-solid fa-envelope"></i> mail.adarshbhardwaj@gmail.com</div>
+                            <div><i class="fa-brands fa-linkedin"></i> linkedin.com/in/adarsh-sharma-19710a264</div>
+                            <div><i class="fa-brands fa-github"></i> github.com/adarshsharma7</div>
+                        </div>
+                    </div>
+
+                    <div class="sheet-grid">
+                        <!-- Left Side: Profile, Technical, Soft Skills, Certifications -->
+                        <div class="sheet-left">
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">PROFILE</h3>
+                                <p class="sheet-text">
+                                    Software Developer with startup experience building scalable, real-time web architectures and cross-platform mobile applications. Skilled at translating complex requirements and UI/UX design layouts into high-performance, maintainable software systems. Specializing in the MERN/Next.js ecosystem and Flutter/Dart frameworks.
+                                </p>
+                            </div>
+
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">MOBILE TECH</h3>
+                                <ul class="sheet-list">
+                                    <li>Flutter Framework</li>
+                                    <li>Dart Language</li>
+                                    <li>Riverpod / Provider</li>
+                                    <li>REST APIs Integration</li>
+                                    <li>Firebase Ecosystem</li>
+                                    <li>Native API Bridges</li>
+                                </ul>
+                            </div>
+
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">WEB & BACKEND</h3>
+                                <ul class="sheet-list">
+                                    <li>Next.js / React</li>
+                                    <li>JavaScript / TypeScript</li>
+                                    <li>Node.js / Express</li>
+                                    <li>MongoDB & Mongoose</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>WebSockets / WebRTC</li>
+                                </ul>
+                            </div>
+
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">OTHER TOOLING</h3>
+                                <ul class="sheet-list">
+                                    <li>Git / Version Control</li>
+                                    <li>Docker Containers</li>
+                                    <li>Redis Caching</li>
+                                    <li>JWT & OAuth Security</li>
+                                    <li>AI & LLM Integration</li>
+                                    <li>ElevenLabs & TTS</li>
+                                </ul>
+                            </div>
+
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">EDUCATION</h3>
+                                <div class="sheet-item" style="margin-bottom: 8px;">
+                                    <div class="sheet-item-header">
+                                        <strong>MCA (Pursuing)</strong>
+                                        <span>2025-27</span>
+                                    </div>
+                                    <div class="sheet-item-sub">AKTU Technical University</div>
+                                </div>
+                                <div class="sheet-item">
+                                    <div class="sheet-item-header">
+                                        <strong>Languages</strong>
+                                    </div>
+                                    <div class="sheet-item-sub">Hindi, English</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Side: Experience, Projects, Declaration -->
+                        <div class="sheet-right">
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">WORK EXPERIENCE</h3>
+                                
+                                <div class="sheet-item">
+                                    <div class="sheet-item-header">
+                                        <strong>Software Developer (Startup)</strong>
+                                        <span>Sep 2025 - Present</span>
+                                    </div>
+                                    <div class="sheet-item-sub">Full Stack & Mobile Development</div>
+                                    <ul class="sheet-bullets-sheet" style="font-size: 11px; margin-top: 4px; color: #334155; padding-left: 14px;">
+                                        <li>Developing scalable mobile apps using Flutter/Dart with customized Riverpod state architectures and clean UI models.</li>
+                                        <li>Building end-to-end LMS student portals with custom role management using React and Next.js.</li>
+                                        <li>Implementing secure REST API layers (JWT, OAuth) and WebSocket/Pusher real-time services.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">PROJECTS</h3>
+
+                                <div class="sheet-project-item">
+                                    <div class="sheet-item-header">
+                                        <strong>YaadKaro — AI Study Companion</strong>
+                                    </div>
+                                    <div class="sheet-project-tech">Flutter · Dart · Node · OpenAI · Redis</div>
+                                    <p class="sheet-project-desc">AI-powered mobile study application containing conceptual error scanning, Google TTS voice agent simulations, and low-latency server processing.</p>
+                                </div>
+
+                                <div class="sheet-project-item">
+                                    <div class="sheet-item-header">
+                                        <strong>TutorApp — Multi-Tenant AI LMS SaaS</strong>
+                                    </div>
+                                    <div class="sheet-project-tech">Next.js · MERN · Flutter · RAG AI · Razorpay</div>
+                                    <p class="sheet-project-desc">Enterprise SaaS engineered at a startup, featuring a 4-portal system, dynamic Razorpay credit gating, Groq LLM agent coordinators, and Hostinger VPS deployment.</p>
+                                </div>
+
+                                <div class="sheet-project-item">
+                                    <div class="sheet-item-header">
+                                        <strong>SyncDraw — Collaborative Canvas</strong>
+                                    </div>
+                                    <div class="sheet-project-tech">Next.js · React · WebSockets · WebRTC</div>
+                                    <p class="sheet-project-desc">Interactive drawing app built for synchronized screen canvas drawing, WebRTC custom audio streaming rooms, and messaging channels.</p>
+                                </div>
+                            </div>
+
+                            <div class="sheet-section">
+                                <h3 class="sheet-section-title">DECLARATION</h3>
+                                <p class="sheet-text italic">
+                                    I hereby declare that all details provided above are correct to the best of my knowledge.
+                                </p>
+                                <div class="sheet-declaration-footer">
+                                    <div>
+                                        <strong>Adarsh Sharma</strong>
+                                    </div>
+                                    <div class="sheet-declaration-date-place">
+                                        <span>Date: _________</span>
+                                        <span>Place: Baraut</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
